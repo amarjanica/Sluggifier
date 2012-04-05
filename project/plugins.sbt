@@ -8,24 +8,4 @@
 
 resolvers += Classpaths.typesafeResolver
 
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.0.0-RC1")
-
-// +-------------------------------------------------------------------------------------+
-// | SBT Scalariform (https://github.com/typesafehub/sbtscalariform)                     |
-// | Performs source code formatting                                                     |
-// |                                                                                     |
-// | See also: Scalariform reference (http://mdr.github.com/scalariform/)                |
-// +-------------------------------------------------------------------------------------+
-
-resolvers += Classpaths.typesafeResolver
-
-addSbtPlugin("com.typesafe.sbtscalariform" % "sbtscalariform" % "0.3.0")
-
-resolvers:= Seq("Apache Maven" at "http://mvnrepository.com/artifact/")
-
-externalResolvers <<= resolvers map { rs =>
-  Resolver.withDefaultResolvers(rs, mavenCentral = true, scalaTools = false)
-}
-
-
-
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.0.0")
