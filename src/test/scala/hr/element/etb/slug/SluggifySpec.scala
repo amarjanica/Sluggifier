@@ -34,5 +34,14 @@ class SluggifySpec extends FeatureSpec with GivenWhenThen with MustMatchers {
       val out = Sluggifier(in)
       out must equal (res)
     }
+
+    scenario("URL unsafe character trimming2"){
+      val in = """~ $Hajduk ! Is better!!!Slayer rules$ ~""" mkString;
+      given ("an URL unsafe string: %s" format in)
+      val res = "hajduk-is-better-slayer-rules"
+      then ("the resulting slug must be trimmed: %s" format res)
+      val out = Sluggifier(in)
+      out must equal (res)
+    }
   }
 }

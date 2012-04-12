@@ -2,7 +2,7 @@ organization := "hr.element.etb"
 
 name         := "etb-slug"
 
-version      := "0.0.1"
+version      := "0.0.2"
 
 // ### Build settings ###
 
@@ -33,4 +33,4 @@ publishArtifact in (Compile, packageDoc) := false
 
 // ### Misc ###
 
-initialCommands := "import hr.element.doit.slug._"
+//initialCommands := "import hr.element.doit.slug._"
